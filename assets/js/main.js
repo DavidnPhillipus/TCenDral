@@ -90,41 +90,7 @@ if (heroSlides.length > 0) {
   }, 5000);
 }
 
-const domainSlides = document.querySelectorAll('.domain-showcase__slide');
-const domainDots = document.querySelector('.domain-showcase__dots');
 const workPanelSlides = document.querySelectorAll('.workpage-panel__slide');
-
-if (domainSlides.length > 0) {
-  const dots = [];
-
-  domainSlides.forEach((_, index) => {
-    const dot = document.createElement('button');
-    dot.className = 'domain-showcase__dot';
-    dot.setAttribute('aria-label', `Show domain ${index + 1}`);
-    dot.addEventListener('click', () => {
-      showDomainSlide(index);
-    });
-    domainDots?.appendChild(dot);
-    dots.push(dot);
-  });
-
-  let activeDomainIndex = 0;
-
-  const showDomainSlide = (index) => {
-    domainSlides.forEach((slide) => slide.classList.remove('active'));
-    dots.forEach((dot) => dot.classList.remove('active'));
-    domainSlides[index]?.classList.add('active');
-    dots[index]?.classList.add('active');
-    activeDomainIndex = index;
-  };
-
-  showDomainSlide(0);
-
-  setInterval(() => {
-    activeDomainIndex = (activeDomainIndex + 1) % domainSlides.length;
-    showDomainSlide(activeDomainIndex);
-  }, 5000);
-}
 
 if (workPanelSlides.length > 0) {
   let workPanelIndex = 0;
@@ -135,3 +101,6 @@ if (workPanelSlides.length > 0) {
     workPanelSlides[workPanelIndex].classList.add('active');
   }, 5000);
 }
+
+/* Domain showcase — the continuous sliding marquee is pure CSS (see .domain-marquee__track
+   animation in styles.css), so no JS is needed to drive it. */
