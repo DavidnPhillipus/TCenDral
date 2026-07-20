@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="TCenDral is a creative team of three building modern digital experiences through design, development, and strategy.">
+      <meta name="robots" content="index, follow">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>TCenDral | Creative Team Portfolio</title>
+   </head>
+   <body>
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#home" class="nav__logo">
+               <span class="nav__logo-mark">T</span>
+               <span class="nav__logo-text">TCenDral</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="#home" class="nav__link active-link">Home</a></li>
+                  <li><a href="about.html" class="nav__link">About</a></li>
+                  <li><a href="work.html" class="nav__link">Work</a></li>
+                  <li><a href="services.html" class="nav__link">Services</a></li>
+                  <li><a href="skills.html" class="nav__link">Skills</a></li>
+                  <li><a href="#contact" class="nav__contact">Contact us</a></li>
+               </ul>
+
+               <button class="nav__close" id="nav-close" aria-label="Close menu">
+                  <i class="ri-close-large-line"></i>
+               </button>
+            </div>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+               <i class="ri-menu-line"></i>
+            </button>
+         </nav>
+      </header>
+
+      <main class="main">
+         <section class="hero section" id="home">
+            <div class="container hero__grid">
+               <div class="hero__content">
+                  <p class="hero__eyebrow">We build digital experiences with purpose</p>
+                  <h1>Meet <span>TCenDral</span> — a sharp team of 3 creatives.</h1>
+                  <p class="hero__text">From web design to polished front-end experiences, our team blends strategy, creativity, and technical care to bring ideas to life.</p>
+                  <div class="hero__buttons">
+                     <a href="work.html" class="button">See our work</a>
+                     <a href="#contact" class="button button--secondary">Let’s talk</a>
+                  </div>
+                  <div class="hero__stats">
+                     <div><strong>3</strong><span>Creators</span></div>
+                     <div><strong>100%</strong><span>Passion</span></div>
+                     <div><strong>24/7</strong><span>Support</span></div>
+                  </div>
+               </div>
+
+               <div class="hero__image-card">
+                  <div class="hero__slideshow" aria-label="TCenDral photo slideshow">
+                     <div class="hero__slide active" data-name="Tukuna Mulundu">
+                        <img src="assets/pics/IMG-20260702-WA0096.jpg" alt="Tukuna Mulundu">
+                        <div class="hero__slide-caption">Tukuna T.T Mulundu</div>
+                     </div>
+                     <div class="hero__slide" data-name="David Phillipus">
+                        <img src="assets/pics/IMG-20260413-WA0103.jpg" alt="David Phillipus">
+                        <div class="hero__slide-caption">David Phillipus</div>
+                     </div>
+                     <div class="hero__slide" data-name="Christiano Feijo">
+                        <img src="assets/pics/IMG-20260620-WA0005.jpg" alt="Christiano Feijo">
+                        <div class="hero__slide-caption">Cristiano Feijo</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="contact section" id="contact">
+            <div class="container contact__wrapper">
+               <div>
+                  <p class="section__label">Contact</p>
+                  <h2>Let’s create something memorable.</h2>
+               </div>
+               <form class="contact__form">
+                  <input type="text" placeholder="Your name" aria-label="Your name">
+                  <input type="email" placeholder="Your email" aria-label="Your email">
+                  <textarea rows="4" placeholder="Tell us about your idea" aria-label="Tell us about your idea"></textarea>
+                  <button type="submit" class="button">Send message</button>
+               </form>
+            </div>
+         </section>
+      </main>
+
+      <footer class="footer">
+         <div class="container footer__content">
+            <p>© <span class="year"></span> TCenDral. All rights reserved.</p>
+            <div class="footer__links">
+               <a href="mailto:team@tcendral.com"><i class="ri-mail-line"></i> team@tcendral.com</a>
+            </div>
+         </div>
+      </footer>
+
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Our services at TCenDral, from UI/UX design to frontend development and brand strategy." />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Services | TCenDral</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__logo-mark">T</span>
+          <span class="nav__logo-text">TCenDral</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="work.html" class="nav__link">Work</a></li>
+            <li><a href="services.html" class="nav__link active-link">Services</a></li>
+            <li><a href="skills.html" class="nav__link">Skills</a></li>
+            <li><a href="index.html#contact" class="nav__contact">Contact us</a></li>
+          </ul>
+
+          <button class="nav__close" id="nav-close" aria-label="Close menu">
+            <i class="ri-close-large-line"></i>
+          </button>
+        </div>
+
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <div class="services-hero reveal">
+            <div class="services-hero__content">
+              <p class="section__label">Services</p>
+              <h2>Modern builds for <span>product teams</span>.</h2>
+              <p class="section__description">
+                We build fast, modern products with clean code, solid systems, and thoughtful AI support.
+              </p>
+              <div class="services-badges">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Supabase</span>
+                <span>Vercel</span>
+              </div>
+            </div>
+
+            <div class="services-panel reveal">
+              <p class="services-panel__eyebrow">Core stack</p>
+              <ul>
+                <li>Responsive UI engineering</li>
+                <li>API and database integration</li>
+                <li>Launch-ready product flows</li>
+                <li>AI workflow enablement</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-grid">
+            <article class="card card--featured reveal">
+              <div class="card__icon"><i class="ri-code-box-line"></i></div>
+              <h3>Frontend & UI Engineering</h3>
+              <p>We craft polished, responsive web experiences with modern frontend tools and a strong user focus.</p>
+            </article>
+            <article class="card card--featured reveal">
+              <div class="card__icon"><i class="ri-server-line"></i></div>
+              <h3>Backend & Data Solutions</h3>
+              <p>We connect reliable systems, databases, and APIs to make products work smoothly behind the scenes.</p>
+            </article>
+            <article class="card card--featured reveal">
+              <div class="card__icon"><i class="ri-ai-generate"></i></div>
+              <h3>Product & AI Enablement</h3>
+              <p>We turn ideas into practical products with AI features, smart workflows, and clear product direction.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>© <span class="year"></span> TCenDral. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      const revealItems = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+  </body>
+</html>
