@@ -102,5 +102,19 @@ if (workPanelSlides.length > 0) {
   }, 5000);
 }
 
+/* Contact form handling: open user's mail client with prefilled message to David */
+const contactForm = document.getElementById('contact-form') || document.querySelector('.contact__form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = contactForm.querySelector('input[type="text"]')?.value || '';
+    const email = contactForm.querySelector('input[type="email"]')?.value || '';
+    const message = contactForm.querySelector('textarea')?.value || '';
+    const subject = encodeURIComponent('Website contact from ' + (name || 'Visitor'));
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:david.n.phillipus@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
+
 /* Domain showcase — the continuous sliding marquee is pure CSS (see .domain-marquee__track
    animation in styles.css), so no JS is needed to drive it. */
