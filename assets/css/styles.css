@@ -27,7 +27,7 @@
   --z-fixed: 100;
 }
 
-@media (width >= 1150px) {
+@media (min-width: 1150px) {
   :root {
     --biggest-font-size: 4rem;
     --bigger-font-size: 2.5rem;
@@ -256,7 +256,7 @@ img {
   right: 0;
 }
 
-@media (width <= 1150px) {
+@media (max-width: 1150px) {
   .nav__toggle {
     display: inline-flex;
     align-items: center;
@@ -287,9 +287,31 @@ img {
   .nav__contact {
     margin-left: 0;
   }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__showcase,
+  .card-grid,
+  .workpage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__media-card img {
+    min-height: 180px;
+  }
+
+  .hero__slideshow {
+    min-height: 220px;
+  }
+
+  .domain-card {
+    flex: 1 1 100%;
+  }
 }
 
-@media (width > 1150px) {
+@media (min-width: 1151px) {
   .nav__close {
     display: none;
   }
@@ -448,10 +470,14 @@ img {
   background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(88,255,164,0.06));
 }
 
+.about__media-card {
+  aspect-ratio: 4 / 3;
+  max-height: 420px;
+}
+
 .about__media-card img {
   width: 100%;
   height: 100%;
-  min-height: 320px;
   object-fit: cover;
   object-position: center;
 }
@@ -959,7 +985,7 @@ img {
   color: var(--white-color);
 }
 
-@media (width < 540px) {
+@media (max-width: 540px) {
   .section {
     padding-block: 4rem 1rem;
   }
@@ -990,8 +1016,14 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .hero__slideshow,
+  .workpage-panel__stage,
+  .about__media-card {
+    max-height: 420px;
+  }
+
   .hero__slideshow {
-    min-height: 240px;
+    min-height: 220px;
   }
 
   .hero__image-badge {
@@ -1005,6 +1037,14 @@ img {
   .workpage-card,
   .workpage-cta {
     padding: 1rem;
+  }
+
+  .about__media-card img,
+  .workpage-panel__slide img,
+  .hero__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .contact__form {
@@ -1022,7 +1062,7 @@ img {
   }
 }
 
-@media (width >= 540px) {
+@media (min-width: 540px) {
   .nav__menu {
     width: 50%;
   }
@@ -1033,13 +1073,13 @@ img {
   }
 }
 
-@media (width >= 540px) {
+@media (min-width: 540px) {
   .workpage-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (width >= 1150px) {
+@media (min-width: 1150px) {
   .container {
     margin-inline: auto;
   }
