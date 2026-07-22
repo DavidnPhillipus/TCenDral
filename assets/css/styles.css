@@ -336,9 +336,28 @@ img {
 }
 
 .hero h1 {
-  font-size: var(--biggest-font-size);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-size: var(--bigger-font-size);
+  line-height: 1.05;
+  margin-bottom: 0.85rem;
+}
+
+.hero__subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.hero__subtitle i {
+  font-size: 1.2rem;
+  color: var(--first-color);
+}
+
+.footer__links a i {
+  font-size: 1.05rem;
+  vertical-align: middle;
 }
 
 .hero h1 span {
